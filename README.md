@@ -15,9 +15,9 @@ October 14, 2022 <br />
 1) Clone or download this repo, saving the files to a directory
 2) Open terminal and CD into the directory of the downloaded files.
 3) Enter the following lines into your terminal.
-> npm install -g meteor
-> meteor update --release METEOR@2.7.3 
-> npm start
+> npm install -g meteor <br />
+> meteor update --release METEOR@2.7.3 <br />
+> npm start <br />
 4) Open the link (similar to http://localhost:3000/) that pops up in your terminal.
 
 On the link, play around with the following features: <br />

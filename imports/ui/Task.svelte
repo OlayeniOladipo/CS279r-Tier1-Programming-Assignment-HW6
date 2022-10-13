@@ -2,11 +2,14 @@
   import { useTracker } from 'meteor/rdb:svelte-meteor-data';  
   import { Tasks } from "../api/tasks.js";
 
+  // Variable declaration
   export let key;
   export let task;
   let showPrivateButton;
 
+  // Grabbing the user - reactive element
   $: currentUser = useTracker(() => Meteor.user());
+
 
   $: {
     showPrivateButton = false;
@@ -15,6 +18,7 @@
     }
   }
 
+  // Functions that call functions in the Task.js file
   function toggleChecked() {
       // Set the checked property to the opposite of its current value
       Meteor.call("tasks.setChecked", task._id, !task.checked);
@@ -30,8 +34,10 @@
   
 </script>
 
+<!-- HTML Section -->
 <li class:checked="{task.checked}"
     class:private="{task.private}" >
+  <!-- deleteThisTask refers to earlier function. -->
   <button class="delete" on:click={deleteThisTask}>
     &times;
   </button>
@@ -43,12 +49,14 @@
     on:click={toggleChecked}
   />
 
+  <!-- Using if statements to showcase buttons. -->
   {#if showPrivateButton}
     <button className="toggle-private" on:click="{togglePrivate}">
       { task.private ? "Private" : "Public" }
     </button>
   {/if}
 
+  <!-- <strong> tag is for text for strong importance -->
   <span class="text">
     <strong>{ task.username }</strong>
     : { task.text }

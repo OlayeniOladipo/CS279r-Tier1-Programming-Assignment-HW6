@@ -1,4 +1,6 @@
-/* CSS declarations go here */
+/* The CSS file to defines the app's styles. */
+/* As this file is similar to past CSS files in past assignments,
+I have minimal comments. */
 body {
   padding: 10px;
   font-family: sans-serif;
@@ -111,6 +113,7 @@ header .hide-completed {
   margin-left: 5px;
 }
 
+/* Specific changes per device. */
 @media (max-width: 600px) {
   li {
     padding: 12px 15px;

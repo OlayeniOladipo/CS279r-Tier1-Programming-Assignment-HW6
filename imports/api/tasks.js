@@ -2,12 +2,14 @@ import { Meteor } from 'meteor/meteor';
 import { Mongo } from 'meteor/mongo';
 import { check } from 'meteor/check';
 
+// Tasks is a Meteor's version of MongoDB 
 export const Tasks = new Mongo.Collection('tasks');
 
 if (Meteor.isServer) {
-    // This code only runs on the server
+    // This code only runs on the server and returns to the client.
     Meteor.publish('tasks', function tasksPublication() {
         return Tasks.find({
+            // $or logical OR operator
             $or: [
                 { private: { $ne: true } },
                 { owner: this.userId },
@@ -16,6 +18,7 @@ if (Meteor.isServer) {
     });
 }
 
+// Methods that you can call in the .svelte files
 Meteor.methods({
     'tasks.insert'(text) {
         check(text, String);
@@ -33,8 +36,10 @@ Meteor.methods({
         });
     },
     'tasks.remove'(taskId) {
+        // Check for matching string pattern
         check(taskId, String);
 
+        // Select a task and check proper ownership before deleting.
         const task = Tasks.findOne(taskId);
         if (task.private && task.owner !== this.userId) {
             // If the task is private, make sure only the owner can delete it
@@ -52,7 +57,7 @@ Meteor.methods({
             // If the task is private, make sure only the owner can check it off
             throw new Meteor.Error('not-authorized');
         }
-
+        // edit the database with .update()
         Tasks.update(taskId, { $set: { checked: setChecked } });
     },
     'tasks.setPrivate'(taskId, setToPrivate) {

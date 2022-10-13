@@ -4,7 +4,10 @@ October 14, 2022 <br />
 
 **Reflection:** What are the significant software concepts that this combination of technologies has that each previous set of technologies did not? Or that they handle significantly differently?
 
+Meteor is open source framework for JS development on Web, Mobile, and Desktop. MongoDB is built in with Meteor, so it can be used. NodeJS and Meteor are both full-stake frameworks using JavaScript. Meteor simply has HMTL/CSS + NodeJS container for the server + JS for the client brower.
 
+
+flutter - observablehq - firebase - 
 
 **Important files to view:** 
 - client/main.css | client/main.html | client/main.js
@@ -31,6 +34,8 @@ On the link, play around with the following features: <br />
 
 Worked off the code from the following sources:
 - https://github.com/meteor/simple-todos-svelte
+
+
 Comments informed by the following:
 - https://forums.meteor.com/t/solved-when-should-we-use-meteor-startup/2710 </br>
 - https://svelte.dev/tutorial/onmount </br>
@@ -39,5 +44,6 @@ Comments informed by the following:
 - https://svelte.dev/tutorial/reactive-statements </br>
 - https://knockoutjs.com/documentation/html-binding.html#:~:text=The%20html%20binding%20causes%20the,more%20efficient%20text%20binding%20instead. </br>
 - https://svelte-tutorial.meteor.com/simple-todos/04-update-and-remove.html </br>
+- https://stackshare.io/stackups/meteor-vs-nodejs#:~:text=Meteor%20and%20Node.,js%20is%20favored. 
 
 ![screenshot](screenshot.png)

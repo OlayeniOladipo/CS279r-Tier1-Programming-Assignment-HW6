@@ -4,10 +4,7 @@ October 14, 2022 <br />
 
 **Reflection:** What are the significant software concepts that this combination of technologies has that each previous set of technologies did not? Or that they handle significantly differently?
 
-Meteor is open source framework for JS development on Web, Mobile, and Desktop. MongoDB is built in with Meteor, so it can be used. NodeJS and Meteor are both full-stake frameworks using JavaScript. Meteor simply has HMTL/CSS + NodeJS container for the server + JS for the client brower.
-
-
-flutter - observablehq - firebase - 
+Meteor is open source framework for JS development on Web, Mobile, and Desktop. MongoDB is built in with Meteor, so it can be used. NodeJS and Meteor are both full-stake frameworks using JavaScript. Meteor simply has HMTL/CSS + NodeJS container for the server + JS for the client brower. ObservableHQ is more of a notebook than a framework. Firebase and MongoDB are both database platforms.
 
 **Important files to view:** 
 - client/main.css | client/main.html | client/main.js
